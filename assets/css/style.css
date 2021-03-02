@@ -1,103 +1,14 @@
 @font-face {
-  font-family:'Montserrat_medium';
+  font-family:'Montserrat';
   src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family:'Oswald';
   src: url('../fonts/Oswald-VariableFont_wght.ttf') format('truetype');
 }
-@media only screen and (max-width: 768px) {
-	body{
-		min-width: auto !important;
-	}
-	.nav-item , .nav-item-lv{
-		display: none;
-	}
-	.nav-menu{
-		display: inline !important;
-		padding-left:51px;
-		width: 18px;
-		height: 15px;
-	}
-	.nav-logo{
-		width: 78px;
-	}
-	header{
-		padding: 0 20px;
-	}
-	nav{
-		padding-top: 18px !important;
-	}
-	.transition-top, .transition-bottom{
-		min-width: auto !important;
-	}
-	.transition-first{
-		min-width: auto !important;
-		margin-top: -5px !important ;
-	}
-	.transition-top{
-		margin-top: -1px !important ;
-	}
-	.transition-bottom{
-		margin-top:-3% !important ;
-	}
-	.center-text{
-		width:79.2% !important;
-		padding: 160px 0 !important;
-	}
-	.input-div-inner, .buttons-div{
-		width:79.2% !important;
-	}
-	.buttons-div div:first-child{
-		margin: 0 142px 0 80px !important;
-		font-size: 18px !important;
-	}
-	.buttons-div div:last-child{
-		font-size: 18px !important;
-	}
-	.buttons-div-inner-buttons.left{
-		margin-top: 86px !important;
-	}
-	.buttons-div-inner p{
-		padding: 5px !important;
-	}
-	.buttons-div-inner-buttons:hover, .button-send:hover {
-		transform: none !important;
-		background-color: #FFA800 !important;
-	}
-	.play-button:hover{
-		transform: translate(-50%, -50%) !important;
-	}
-	.bottom-info-div{
-		width: auto !important;
-	}
-	.bottom-div-2, .bottom-div-3{
-		display: none !important;
-	}
-	.supporters-div{
-		height: 300px !important;
-		background-image: url('../img/orange_ripped-mobile.png') !important;
-	}
-	.supporters-text{
-		padding: 56px 0 25px 0 !important;
-		font-size: 34px !important;
-	}
-	.supporters-logos{
-		margin:auto;
-	}
-	.logo1{
-		height: 47px !important;
-		padding: 0 50.6px 15px 0 !important;
-	}
-	.logo2{
-		height: 71px !important;
-		padding: 0  !important;
-	}
-
-}
 body{
 	margin:0;
-	min-width: 1320px;
+	min-width: 320px;
 }
 header{
 	display:flex;
@@ -107,20 +18,37 @@ header{
 	padding:0 62px;
 	background-color:#fff;
 }
+@media only screen and (max-width: 980px) {
+	header {
+		padding: 0 20px;
+	}
+}
 nav{
 	display:flex;
 	flex: 1;
 	flex-direction:row;
 	padding-top:51px;
 	justify-content: flex-end;
-	font-family:Montserrat_medium;
+	font-family: Montserrat;
 	font-size:18px;
 	color:#060606;
+}
+@media only screen and (max-width: 980px) {
+	nav {
+		padding-top: 18px !important;
+	}
 }
 .nav-menu{
 	 display:none; 
   }
-
+@media only screen and (max-width: 980px) {
+	.nav-menu{
+		display: inline !important;
+		padding-left:51px;
+		width: 18px;
+		height: 15px;
+	}
+}
 .nav-item{
 	padding-left:35px;
 }
@@ -135,11 +63,31 @@ nav{
 	font-weight:bold;
 	cursor:pointer;
 }
+@media only screen and (max-width: 980px) {
+	.nav-item , .nav-item-lv{
+		display: none;
+	}
+}
+@media only screen and (max-width: 980px) {
+	.nav-logo{
+		width: 78px;
+	}
+}
 .transition-top, .transition-first{
 	position:absolute;
 	width:100%;
-	min-width: 1320px;
 	z-index:3;
+}
+@media only screen and (max-width: 768px) {
+	.transition-first {
+		min-width: auto !important;
+		margin-top: -5px !important;
+	}
+
+	.transition-top {
+		min-width: auto !important;
+		margin-top: -1px !important;
+	}
 }
 .video-placeholder{
 	width: 100%;
@@ -163,13 +111,18 @@ nav{
 	cursor:pointer;
 	transform:translate(-50%, -50%) scale(1.1,1.1);
 }
+@media only screen and (max-width: 768px) {
+	.play-button:hover {
+		transform: translate(-50%, -50%) !important;
+	}
+}
 .center-text-div{
 	width:100%;
 	text-align: center;
 	align-items:center;
 }
 .center-text{
-	font-family: Montserrat_medium;
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -178,6 +131,31 @@ nav{
 	padding: 150px 0;
 	width: 47.2%;
 	color: #2F4858;
+}
+@media only screen and (max-width: 768px) {
+	.center-text {
+		width: 79.2% !important;
+		padding: 160px 0 !important;
+	}
+}
+@media only screen and (max-width: 630px) {
+	.center-text {
+		padding: 80px 0 !important;
+		font-size: 12px !important;
+		line-height: 15px !important;
+	}
+}
+.photos-div-mobile{
+	display: none;
+}
+@media only screen and (max-width: 630px) {
+	.photos-div-mobile{
+		display:inline;
+		width: 100%;
+	}
+	.photos-div-mobile img{
+		width: 100%;
+	}
 }
 .photos-div-row{
 	display:flex;
@@ -188,6 +166,11 @@ nav{
 	display:flex;
 	flex-direction:column;
 	width:100%;
+}
+@media only screen and (max-width: 630px) {
+	.photos-div-col{
+		display:none;
+	}
 }
 .photos-inner{
 	display:flex;
@@ -210,15 +193,49 @@ nav{
 .transition-bottom{
 	position:absolute;
 	width:100%;
-	min-width: 1320px;
 	z-index:3;
-	margin-top:min(-3%, -40px);
+	margin-top:-3%;
+}
+@media only screen and (max-width: 768px) {
+	.transition-bottom {
+		min-width: auto !important;
+		margin-top: -3% !important;
+	}
 }
 .buttons-div{
 	padding: 150px 0;
 	display:flex;
 	flex-direction:row;
 	width:100%;
+}
+@media only screen and (max-width: 671px) {
+	.buttons-div {
+		width: 79.2% !important;
+		margin:auto;
+		justify-content: center;
+	}
+	.buttons-div div:first-child {
+		margin: 0 min(18.5%, 10px) 0 0 !important;
+		font-size: 18px !important;
+	}
+	.buttons-div div:last-child {
+		font-size: 18px !important;
+	}
+	.buttons-div-inner-buttons.left{
+		margin-top: 86px !important;
+	}
+}
+@media only screen and (max-width: 630px) {
+	.buttons-div {
+		flex-direction: column !important;
+	}
+	.buttons-div-inner-buttons.left{
+		margin-top: 0 !important;
+		margin-bottom: 80px;
+	}
+	.buttons-div-inner-buttons{
+		margin-top: 30px !important;
+	}
 }
 .buttons-div-inner{
 	font-family: Oswald;
@@ -230,8 +247,13 @@ nav{
 	margin:auto;
 	color: #2F4858;
 }
+@media only screen and (max-width: 768px) {
+	.buttons-div-inner p {
+		padding: 5px !important;
+	}
+}
 .buttons-div-inner-buttons{
-	font-family: Montserrat_medium;
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
@@ -245,6 +267,12 @@ nav{
 	border-radius:25px;
 	color: #fff;
 	transition: all .2s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+	.buttons-div-inner-buttons:hover {
+		transform: none !important;
+		background-color: #FFA800 !important;
+	}
 }
 .buttons-div-inner-buttons:hover{
 	cursor:pointer;
@@ -268,11 +296,27 @@ nav{
 	display:flex;
 	flex-direction:column;
 	margin:auto;
-	width:45%;	
+	width:612px;
+}
+@media only screen and (max-width: 768px) {
+	.input-div-inner {
+		width: 608px; !important;
+	}
+}
+@media only screen and (max-width: 630px) {
+	.input-div-inner {
+		padding: 0 20px !important;
+		width: auto !important;
+	}
 }
 .input-div-row{
 	display:flex;
 	flex-direction:row;
+}
+@media only screen and (max-width: 630px) {
+	.input-div-row {
+		flex-direction: column !important;
+	}
 }
 input{
 	display:flex;
@@ -282,7 +326,7 @@ input{
 	border: none;
 	border-radius: 6px;
 	height: 20px;
-	font-family: Montserrat_medium;
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
@@ -292,13 +336,18 @@ input{
 #input-name{
 	margin-right: 20px;
 }
+@media only screen and (max-width: 630px) {
+	#input-name {
+		margin-right: 0 !important;
+	}
+}
 textarea{
 	resize: none;
 	background-color: rgba(196, 196, 196, 0.4);
 	border: none;
 	border-radius: 6px;
 	height: 206px;
-	font-family: Montserrat_medium;
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
@@ -352,7 +401,7 @@ textarea:focus, input:focus{
 	cursor: pointer;
 }
 .button-send{
-	font-family: Montserrat_medium;
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 24px;
@@ -372,6 +421,12 @@ textarea:focus, input:focus{
 	transform: scale(1.1,1.1);
 	background-color: #FFDA16;
 }
+@media only screen and (max-width: 768px) {
+	.button-send:hover {
+		transform: none !important;
+		background-color: #FFA800 !important;
+	}
+}
 .supporters-div{
 	display: flex;
 	flex-direction: column;
@@ -379,6 +434,20 @@ textarea:focus, input:focus{
 	z-index: 2;
 	height: 530px;
 	background-image: url('../img/orange_ripped.png');
+}
+@media only screen and (max-width: 768px) {
+	.supporters-div {
+		height: 300px !important;
+		background-image: url('../img/orange_ripped-mobile.png') !important;
+	}
+}
+.supporters-logos {
+	flex-direction: row;
+}
+@media only screen and (max-width: 768px) {
+	.supporters-logos {
+		margin: auto;
+	}
 }
 .supporters-text{
 	padding: 100px 0 70px 0 ;
@@ -391,14 +460,46 @@ textarea:focus, input:focus{
 	text-align: center;
 	color: #2F4858;
 }
+@media only screen and (max-width: 768px) {
+	.supporters-text {
+		padding: 56px 0 25px 0 !important;
+		font-size: 34px !important;
+	}
+}
+
 .logo1{
 	height: 80px;
 	padding: 0 42.5px 20px 0;
+}
+@media only screen and (max-width: 768px) {
+	.logo1 {
+		height: 47px !important;
+		padding: 0 0 15px 0 !important;
+		margin: 0 5px;
+	}
 }
 .logo2{
 	height: 120px;
 	padding: 0 42.5px;
 }
+@media only screen and (max-width: 768px) {
+	.logo2{
+		height: 71px !important;
+		padding: 0  !important;
+	}
+}
+
+.supporters-logo-mobile{
+	display: inline-block;
+	justify-content: space-around;
+}
+@media only screen and (max-width: 630px) {
+	.supporters-logo-mobile{
+		display: flex;
+		flex-direction: row;
+	}
+}
+
 .bottom-info-wrapper{
 	width:100%;
 	align-items:center;
@@ -409,10 +510,16 @@ textarea:focus, input:focus{
 .bottom-info-div{
 	display:flex;
 	flex-direction: row;
-	width: 1366px;
+	max-width: 1366px;
 	margin: 0 auto;
 	background-color: #2F4858;
 	color: #FFF;
+}
+@media only screen and (max-width: 630px) {
+	.bottom-info-div {
+		flex-direction: column !important;
+		width: auto !important;
+	}
 }
 .bottom-div-1{
 	display:flex;
@@ -429,10 +536,31 @@ textarea:focus, input:focus{
 	font-size: 14px;
 	line-height: 17px;
 }
+@media only screen and (max-width: 630px) {
+	.bottom-div-1 p:first-of-type {
+		display: none;
+	}
+}
 .gold-logo{
 	width: 182px;
 	height: 182px;
 	padding-bottom: 70px
+}
+@media only screen and (max-width: 630px) {
+	.gold-logo{
+		align-self: flex-start;
+		width: 162px;
+		height: 162px;
+		padding-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.gold-logo{
+		align-self: flex-start;
+		width: 100px;
+		height: 100px;
+		padding-bottom: 25px
+	}
 }
 .bottom-div-2{
 	display:flex;
@@ -480,12 +608,28 @@ textarea:focus, input:focus{
 	font-size: 24px;
 	line-height: 29px;
 }
+@media only screen and (max-width: 768px) {
+	.bottom-div-2, .bottom-div-3 {
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 1320px) {
+	.bottom-div-2, .bottom-div-3 {
+		display: none !important;
+	}
+}
 .bottom-div-4{
 	display:flex;
 	flex:1;
 	flex-direction: column;	
 	padding: 80px 64px 13px 0;
 	text-align:right;
+}
+@media only screen and (max-width: 630px) {
+	.bottom-div-4 {
+		padding: 0 0 13px 62px;
+		text-align: left;
+	}
 }
 .bottom-div-4 p{
 	margin: 0;
@@ -496,6 +640,13 @@ textarea:focus, input:focus{
 	font-size: 18px;
 	line-height: 22px;
 }
+@media only screen and (max-width: 360px) {
+	.bottom-div-4 p{
+		padding-bottom: 10px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+}
 .bottom-div-4 p:first-of-type{
 	padding-bottom: 22px;
 	font-family: Montserrat;
@@ -504,7 +655,32 @@ textarea:focus, input:focus{
 	font-size: 24px;
 	line-height: 29px;
 }
+@media only screen and (max-width: 360px) {
+	.bottom-div-4 p:first-of-type{
+		padding-bottom: 30px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
 .bottom-div-4 p:nth-last-of-type(2){
+	display: none;
+}
+@media only screen and (max-width: 630px) {
+	.bottom-div-4 p:nth-last-of-type(2) {
+		display: inline;
+		padding-top: 51px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.bottom-div-4 p:nth-last-of-type(2) {
+		font-size: 11px;
+		line-height: 13px;
+		padding-right: 10px;
+	}
+}
+.bottom-div-4 p:nth-last-of-type(3){
 	padding-bottom: 52px;	
 }
 .bottom-div-4 img:hover{
@@ -518,9 +694,17 @@ textarea:focus, input:focus{
 	font-size: 14px;
 	line-height: 17px;
 }
-
-
-
-
-
-
+@media only screen and (max-width: 630px) {
+	.bottom-div-4 p:last-of-type {
+		display: inline;
+		padding-top: 0px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.bottom-div-4 p:last-of-type {
+		font-size: 11px;
+		line-height: 13px;
+	}
+}
