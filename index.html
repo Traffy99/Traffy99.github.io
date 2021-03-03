@@ -33,14 +33,38 @@
 			<a class="nav-item">Sapņus atbalsta</a>
 			<a class="nav-item">99 Iedvesmas stāsti</a>
 			<a class="nav-item-lv">LV</a>
-			<img class="nav-menu" src="assets/img/menu.svg"/>
+			<img class="nav-menu" onclick="open_menu()" src="assets/img/menu.svg"/>
 		</nav>
 	</header>
+	<div id="overlay-menu">
+		<header>
+			<img class="nav-logo" src="assets/img/BlackLogo 3.svg" alt="Logo"/>
+			<nav>
+				<img id="nav-menu-cross" class="nav-menu" onclick="close_menu()" src="assets/img/cross.svg"/>
+			</nav>
+		</header>
+		<div class="menu-col">
+			<div class="menu-row">
+				<p class="active">LV</p>
+				<p>EN</p>
+				<p>RU</p>
+			</div>
+			<p>Ideja</p>
+			<p class="active">Piesaki sapni</p>
+			<p>Uzņēmējiem</p>
+			<p>Sapņu banka</p>
+			<p>Sapņus atbalsta</p>
+			<p>99 Iedvesmas stāsti</p>
+		</div>
+	</div>
 	
 	<img class="transition-first" src="assets/img/Header line.png"/>
-	<div class="video-placeholder-div">	
-		<img class="play-button" src="assets/img/play.svg"/>
-		<img class="video-placeholder" src="assets/img/Sparkle Video 1.png"/>
+	<div class="video-placeholder-div" onclick="playPause()">
+		<img class="play-button" id="play-button" src="assets/img/play.svg" />
+		<video class="video-placeholder" id="video">
+			<source src="assets/img/BM_4OF99_Arta.mp4" type="video/mp4">
+		</video>
+
 	</div>
 	<div class="center-text-div">
 		<p class="center-text">SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. Šeit satiekas sapņotāji un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem.Mēs esam gatavi palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
@@ -139,6 +163,7 @@
 					<p>juris.gogulis@sparkleheart.org</p>
 					<p>+37126890034</p>
 					<p>Biķernieku iela 24a - 5, LV-1006</p>
+					<p class="requisites">Skatīt rekvizītus</p>
 					<div>
 						<img src="assets/img/FB.svg"/>
 						<img src="assets/img/Insta.svg"/>
